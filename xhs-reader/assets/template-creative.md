@@ -3,7 +3,7 @@ tags: [{平台 tag},{笔记标签 1},{笔记标签 2},...,{分类}]
 created: {YYYY-MM-DD}
 type: 创作素材
 品牌: {品牌名 | 通用}
-source: {小红书 | Twitter}
+source: 小红书
 author: {作者名}
 url: {用户发送的原始分享链接}
 date: {YYYY-MM-DD}
@@ -11,12 +11,6 @@ date: {YYYY-MM-DD}
   - "#思"
 场景: {动作化描述此素材的用武之地}
 平台: [公众号, Twitter/X, 小红书]
-激活:
-  写作素材: true
-  待试: false
-  学习: false
-  策展: [公众号, 小红书]
-  个人用途: false
 note: {一句话说明}
 ---
 

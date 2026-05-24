@@ -2,16 +2,10 @@
 tags: [{平台 tag},{笔记标签 1},{笔记标签 2},...,{分类}]
 created: {YYYY-MM-DD}
 type: 知识收集
-source: {小红书 | Twitter}
+source: 小红书
 author: {作者名}
 url: {用户发送的原始分享链接}
 date: {YYYY-MM-DD}
-激活:
-  写作素材: true / false
-  待试: true / false
-  学习: true / false
-  策展: []
-  个人用途: true / false
 note: {一句话说明}
 ---
 

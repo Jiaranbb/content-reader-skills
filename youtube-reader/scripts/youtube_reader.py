@@ -555,12 +555,6 @@ source: YouTube
 author: {uploader}
 url: {video_url}
 date: {upload_date}
-激活:
-  写作素材: false
-  待试: true
-  学习: true
-  策展: []
-  个人用途: true
 note: YouTube 视频逐字稿
 ---
 

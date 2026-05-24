@@ -215,12 +215,6 @@ source: Twitter
 author: {author}
 url: {original_url}
 date: {date_part(published)}
-激活:
-  写作素材: {"true" if note_type == "创作素材" else "false"}
-  待试: false
-  学习: {"false" if note_type == "创作素材" else "true"}
-  策展: []
-  个人用途: true
 note: {compact_ws(str(payload.get("note") or summary))[:80]}
 ---
 

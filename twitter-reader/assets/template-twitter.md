@@ -6,12 +6,6 @@ source: Twitter
 author: {作者名}
 url: {用户发送的原始链接}
 date: {YYYY-MM-DD}
-激活:
-  写作素材: true / false
-  待试: true / false
-  学习: true / false
-  策展: []
-  个人用途: true / false
 note: {一句话说明}
 ---
 

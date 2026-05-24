@@ -31,12 +31,6 @@ source: Twitter
 author: 作者名
 url: 用户发送的原始链接
 date: YYYY-MM-DD
-激活:
-  写作素材: false
-  待试: false
-  学习: true
-  策展: []
-  个人用途: true
 note: 一句话说明
 ---
 ```
