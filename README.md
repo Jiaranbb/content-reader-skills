@@ -207,7 +207,7 @@ scripts/       # 稳定执行脚本
 
 ## 关于作者
 
-嘉然 — AI 效率工具爱好者
+嘉然 Jiaran
 
 - 公众号：嘉然学习笔记
 - GitHub：[Jiaranbb/content-reader-skills](https://github.com/Jiaranbb/content-reader-skills)
