@@ -1,4 +1,4 @@
-# YouTube Reader JR 工作流
+# YouTube Reader 工作流
 
 ## 默认路径：只保存逐字稿
 

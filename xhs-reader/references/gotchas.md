@@ -23,9 +23,9 @@
 
 去掉 `?sign=xxx&t=xxx` 后视频无法播放。提取时必须保留完整 URL。
 
-## 4. javascript_tool 安全过滤
+## 4. 页面 JS 返回值安全过滤
 
-Chrome MCP 的 `javascript_tool` 会拦截返回值中包含 cookie/token 的数据。当提取含签名的 URL 时，直接 `return` 会被 `[BLOCKED: Cookie/query string data]`。
+部分 agent 的页面 JS 工具会拦截返回值中包含 cookie/token 或签名查询参数的数据。当提取含签名的 URL 时，直接 `return` 可能失败或被安全过滤。
 
 **解决：** 先过账号安全门禁；再把 URL 写入 `document.title`，从 tab 信息中读取。用完后记得恢复原标题。不要返回 cookie/token/localStorage 值。
 
@@ -45,7 +45,7 @@ Chrome MCP 的 `javascript_tool` 会拦截返回值中包含 cookie/token 的数
 
 ## 7. 大量图片 OCR 效率
 
-13 张图的图文笔记，逐张 WebFetch + Read 需要较长时间。部分图片可能返回 403。
+13 张图的图文笔记，逐张下载和 OCR 需要较长时间。部分图片可能返回 403。
 
 **解决：** 优先用 HTTP/curl 批量下载。失败的图片只有在通过账号安全门禁后，才能降级用浏览器截图识别。并行下载可提升效率。
 

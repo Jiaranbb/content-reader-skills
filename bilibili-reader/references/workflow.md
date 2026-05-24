@@ -1,4 +1,4 @@
-# Bilibili Reader JR 工作流
+# Bilibili Reader 工作流
 
 ## 默认路径：只保存逐字稿
 

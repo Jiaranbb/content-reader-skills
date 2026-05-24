@@ -271,7 +271,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Write a Twitter/X Obsidian note from browser-extracted JSON")
     parser.add_argument("--input-json", required=True, type=Path)
     parser.add_argument("--category", choices=("创作素材", "知识资源"), default=None)
-    parser.add_argument("--model", default="GPT-5")
+    parser.add_argument("--model", default="agent")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 

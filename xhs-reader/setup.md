@@ -20,7 +20,7 @@ python3 scripts/xhs_extract.py --init --vault "/你的保存目录"
 
 本 skill 不使用任何小红书登录账号。不要在小红书登录状态下运行浏览器提取，也不要为了提取内容引导用户登录。
 
-小红书默认先打开网页版链接。打开或切换到目标页面后，如果 agent 使用浏览器插件控制主浏览器（例如 Codex、Claude Code、Chrome 插件类 agent），运行 `yt-dlp`、脚本提取、页面 JS、评论提取、媒体 URL 提取、截图 OCR 或保存内容前，必须先检测当前页面是否已登录：
+小红书默认先打开网页版链接。打开或切换到目标页面后，如果 agent 使用的是用户可能登录过的浏览器会话，运行 `yt-dlp`、脚本提取、页面 JS、评论提取、媒体 URL 提取、截图 OCR 或保存内容前，必须先检测当前页面是否已登录：
 
 - 未登录：可以继续按未登录能力提取。
 - 已登录：立即停止，并提示用户退出登录或切换到未登录隔离浏览器环境。
@@ -68,30 +68,15 @@ sudo apt install ffmpeg
 
 ## 权限配置
 
-根据你使用的 AI agent 平台，可能需要配置工具权限：
+根据你使用的 AI agent 平台，可能需要开启以下能力：
 
-**Claude Code：** 在 skill 目录下创建 `.claude/settings.local.json`：
-```json
-{
-  "permissions": {
-    "allow": [
-      "Bash(python3 *)",
-      "Bash(curl *)",
-      "Bash(mkdir *)",
-      "WebFetch(domain:xhscdn.com)",
-      "WebFetch(domain:xiaohongshu.com)",
-      "Write(path:/你的Vault路径/**)",
-      "Read(path:/你的Vault路径/**)"
-    ]
-  }
-}
-```
+- 执行终端命令：`python3`、`yt-dlp`、`curl`、`mkdir`、`ffmpeg`。
+- 读写本地文件：保存 Markdown、媒体和 `config.json`。
+- 打开网页并读取页面内容。
+- 执行页面 JavaScript 或等价的 DOM 提取能力。
+- 下载公开图片或视频资源。
 
-**OpenClaw：** 默认打开自己的未登录调试/隔离浏览器；打开后仍需执行登录态检测，通过后优先运行 `yt-dlp`。
-
-**Codex / Claude Code：** 如果浏览器插件会操作用户主浏览器，打开小红书页面后必须立刻检测登录态；检测到真实登录态就停止，不运行 `yt-dlp` 或页面提取。只出现登录弹窗时默认关闭弹窗后继续。
-
-**其他 agent：** 请确保 agent 有执行终端命令、读写文件和操作浏览器的权限。
+如果 agent 使用隔离浏览器，仍需确认该浏览器没有小红书登录态；如果 agent 使用用户主浏览器，打开小红书页面后必须立刻检测登录态。检测到真实登录态就停止，不运行 `yt-dlp` 或页面提取。只出现登录弹窗时默认关闭弹窗后继续。
 
 ## config.json 字段说明
 

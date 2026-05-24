@@ -4,7 +4,7 @@
 
 ## 提取热门评论（Top 10）
 
-用于 Chrome `javascript_tool`，从页面 DOM 提取一级评论并按点赞排序：
+用于任意支持页面 JavaScript / DOM evaluate 的 agent，从页面 DOM 提取一级评论并按点赞排序：
 
 ```javascript
 (() => {

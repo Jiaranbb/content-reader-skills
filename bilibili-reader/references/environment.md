@@ -1,4 +1,4 @@
-# Bilibili Reader JR 环境要求
+# Bilibili Reader 环境要求
 
 ## 固定配置
 

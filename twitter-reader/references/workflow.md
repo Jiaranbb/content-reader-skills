@@ -72,7 +72,7 @@ mkdir -p "标题附件"
 python3 scripts/twitter_note.py \
   --input-json "/tmp/twitter-note.json" \
   --category "知识资源" \
-  --model "GPT-5"
+  --model "agent"
 ```
 
 10. 如果脚本不适合当前内容，再读取 `assets/template-twitter.md` 手动填写 Markdown：
