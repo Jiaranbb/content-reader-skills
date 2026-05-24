@@ -89,7 +89,7 @@ python3 scripts/twitter_note.py \
    - X Article / 长文章里的命令、代码、JSON、数组、日志、树状轨迹、字段列表保存为 fenced code block。
    - `plaintext`、`bash`、`json`、`text` 等语言标记要转成代码块信息字符串，不要作为正文行保留。
    - 文章或图文没有逐字稿时删除「媒体文字内容」区域。
-   - 尾注写成 `*由 {实际模型名} 提取保存*`，不要保留作者、公众号或 skill 名。
+   - 尾注写成 `*由 [twitter-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/twitter-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*`。
 
 ## 只下载视频
 

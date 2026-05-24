@@ -136,7 +136,7 @@ X Article / 长文章格式：
 
 ---
 
-*由 实际模型名 提取保存*
+*由 [twitter-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/twitter-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
 ```
 
-不要保留作者、公众号或 skill 名。不要把 cookies、token、localStorage、报错堆栈或调试信息写入笔记。
+不要把 cookies、token、localStorage、报错堆栈或调试信息写入笔记。

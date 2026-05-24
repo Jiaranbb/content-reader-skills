@@ -595,7 +595,7 @@ note: YouTube 视频逐字稿
 
 ---
 
-*由 GPT-5 提取保存*
+*由 [youtube-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/youtube-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
 """
     path.write_text(note, encoding="utf-8")
     return path
