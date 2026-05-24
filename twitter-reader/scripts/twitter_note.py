@@ -250,7 +250,7 @@ note: {compact_ws(str(payload.get("note") or summary))[:80]}
 
 ---
 
-*由 [twitter-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/twitter-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
+*由 [twitter-reader](https://github.com/Jiaranbb/content-reader/tree/main/twitter-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
 """
 
 

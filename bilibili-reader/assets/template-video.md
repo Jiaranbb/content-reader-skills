@@ -48,4 +48,4 @@ note: Bilibili 视频逐字稿
 
 ---
 
-*由 [bilibili-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/bilibili-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
+*由 [bilibili-reader](https://github.com/Jiaranbb/content-reader/tree/main/bilibili-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*

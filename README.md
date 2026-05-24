@@ -1,4 +1,4 @@
-# content-reader-skills
+# content-reader
 
 一套给 AI Agent 使用的内容保存技能：发送一条链接，自动识别平台，提取内容，保存为本地 Markdown 笔记，并按需下载图片、视频或逐字稿。
 
@@ -59,29 +59,29 @@ Markdown 笔记 + 本地媒体文件
 先克隆仓库：
 
 ```bash
-git clone https://github.com/Jiaranbb/content-reader-skills.git
+git clone https://github.com/Jiaranbb/content-reader.git
 ```
 
 Claude Code：
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R content-reader-skills/content-reader ~/.claude/skills/
-cp -R content-reader-skills/xhs-reader ~/.claude/skills/
-cp -R content-reader-skills/twitter-reader ~/.claude/skills/
-cp -R content-reader-skills/youtube-reader ~/.claude/skills/
-cp -R content-reader-skills/bilibili-reader ~/.claude/skills/
+cp -R content-reader/content-reader ~/.claude/skills/
+cp -R content-reader/xhs-reader ~/.claude/skills/
+cp -R content-reader/twitter-reader ~/.claude/skills/
+cp -R content-reader/youtube-reader ~/.claude/skills/
+cp -R content-reader/bilibili-reader ~/.claude/skills/
 ```
 
 Codex：
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R content-reader-skills/content-reader ~/.codex/skills/
-cp -R content-reader-skills/xhs-reader ~/.codex/skills/
-cp -R content-reader-skills/twitter-reader ~/.codex/skills/
-cp -R content-reader-skills/youtube-reader ~/.codex/skills/
-cp -R content-reader-skills/bilibili-reader ~/.codex/skills/
+cp -R content-reader/content-reader ~/.codex/skills/
+cp -R content-reader/xhs-reader ~/.codex/skills/
+cp -R content-reader/twitter-reader ~/.codex/skills/
+cp -R content-reader/youtube-reader ~/.codex/skills/
+cp -R content-reader/bilibili-reader ~/.codex/skills/
 ```
 
 其他 Agent：将上述 5 个目录放到 agent 能读取的 skills 目录中，并确保它能打开网页、执行命令、读写本地文件。
@@ -176,7 +176,7 @@ pip install faster-whisper
 ## 项目结构
 
 ```text
-content-reader-skills/
+content-reader/
 ├── content-reader/       # 总入口：平台识别和意图路由
 ├── xhs-reader/           # 小红书保存
 ├── twitter-reader/       # Twitter/X 保存
@@ -210,7 +210,7 @@ scripts/       # 稳定执行脚本
 嘉然 Jiaran
 
 - 公众号：嘉然学习笔记
-- GitHub：[Jiaranbb/content-reader-skills](https://github.com/Jiaranbb/content-reader-skills)
+- GitHub：[Jiaranbb/content-reader](https://github.com/Jiaranbb/content-reader)
 
 如果觉得有用，欢迎 Star 和关注交流。
 
@@ -235,29 +235,29 @@ The recommended entry point is `content-reader`. It detects the platform, normal
 Clone this repository, then copy the skill folders you need into your agent's skill directory.
 
 ```bash
-git clone https://github.com/Jiaranbb/content-reader-skills.git
+git clone https://github.com/Jiaranbb/content-reader.git
 ```
 
 Example for Claude Code:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R content-reader-skills/content-reader ~/.claude/skills/
-cp -R content-reader-skills/xhs-reader ~/.claude/skills/
-cp -R content-reader-skills/twitter-reader ~/.claude/skills/
-cp -R content-reader-skills/youtube-reader ~/.claude/skills/
-cp -R content-reader-skills/bilibili-reader ~/.claude/skills/
+cp -R content-reader/content-reader ~/.claude/skills/
+cp -R content-reader/xhs-reader ~/.claude/skills/
+cp -R content-reader/twitter-reader ~/.claude/skills/
+cp -R content-reader/youtube-reader ~/.claude/skills/
+cp -R content-reader/bilibili-reader ~/.claude/skills/
 ```
 
 Example for Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R content-reader-skills/content-reader ~/.codex/skills/
-cp -R content-reader-skills/xhs-reader ~/.codex/skills/
-cp -R content-reader-skills/twitter-reader ~/.codex/skills/
-cp -R content-reader-skills/youtube-reader ~/.codex/skills/
-cp -R content-reader-skills/bilibili-reader ~/.codex/skills/
+cp -R content-reader/content-reader ~/.codex/skills/
+cp -R content-reader/xhs-reader ~/.codex/skills/
+cp -R content-reader/twitter-reader ~/.codex/skills/
+cp -R content-reader/youtube-reader ~/.codex/skills/
+cp -R content-reader/bilibili-reader ~/.codex/skills/
 ```
 
 Other agents can use the same directory layout as long as they support local skills, command execution, and file writes.

@@ -39,4 +39,4 @@ note: YouTube 视频逐字稿
 
 ---
 
-*由 [youtube-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/youtube-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
+*由 [youtube-reader](https://github.com/Jiaranbb/content-reader/tree/main/youtube-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*

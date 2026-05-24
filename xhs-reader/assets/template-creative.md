@@ -74,4 +74,4 @@ note: {一句话说明}
 
 ---
 
-*由 [xhs-reader](https://github.com/Jiaranbb/content-reader-skills/tree/main/xhs-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
+*由 [xhs-reader](https://github.com/Jiaranbb/content-reader/tree/main/xhs-reader) 提取保存 | 作者：嘉然 · 公众号「嘉然学习笔记」*
