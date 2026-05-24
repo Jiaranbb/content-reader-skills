@@ -1,0 +1,7 @@
+interface:
+  display_name: "Bilibili Reader"
+  short_description: "B 站逐字稿、合集批量和视频保存"
+  default_prompt: "使用 $bilibili-reader 保存或下载这个 B 站链接。"
+
+policy:
+  allow_implicit_invocation: true

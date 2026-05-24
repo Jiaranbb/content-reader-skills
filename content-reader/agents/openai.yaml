@@ -1,0 +1,7 @@
+interface:
+  display_name: "Content Reader"
+  short_description: "按平台路由内容保存、下载和逐字稿任务"
+  default_prompt: "使用 $content-reader 保存或下载这个链接，并按平台自动选择对应流程。"
+
+policy:
+  allow_implicit_invocation: true

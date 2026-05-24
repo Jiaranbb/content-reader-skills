@@ -1,0 +1,7 @@
+interface:
+  display_name: "Twitter Reader"
+  short_description: "Twitter/X 保存、下载和逐字稿"
+  default_prompt: "使用 $twitter-reader 保存或下载这个 Twitter/X 链接。"
+
+policy:
+  allow_implicit_invocation: true

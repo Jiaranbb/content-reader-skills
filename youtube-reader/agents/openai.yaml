@@ -1,0 +1,7 @@
+interface:
+  display_name: "YouTube Reader"
+  short_description: "YouTube 逐字稿、合集批量和视频保存"
+  default_prompt: "使用 $youtube-reader 保存或下载这个 YouTube 链接。"
+
+policy:
+  allow_implicit_invocation: true
