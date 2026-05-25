@@ -29,14 +29,11 @@ yt-dlp -o "%(title)s.%(ext)s" "$YTDLP_URL"
 ```
 
 7. `yt-dlp` 失败时，在已通过账号安全门禁的页面使用 `references/extract-js.md` 获取媒体 URL，再用 `curl` 下载。
+   - 如果 `yt-dlp` 报 `No video formats found`，通常说明当前笔记是图文笔记或没有可下载视频。用户要下载图片时，不要终止；继续用脚本或页面 JS 提取 `images`，再逐张下载。
 
 ## 保存笔记
 
 ### Step 1：解析链接并提取数据
-
-Twitter/X：直接设 `YTDLP_URL=ORIGINAL_LINK`，优先用 `yt-dlp`。小红书账号安全门禁不适用于 Twitter/X。
-
-小红书：
 
 1. 用浏览器打开 `ORIGINAL_LINK`，短链接也直接打开，让网页完成跳转。
 2. 执行 `references/account-safety.md`。检测到真实登录态就停止；只出现登录弹窗时关闭弹窗后继续。
@@ -50,6 +47,7 @@ yt-dlp --dump-single-json --skip-download "$YTDLP_URL" 2>/dev/null
 5. `yt-dlp` 失败时降级：
    - Path A：`python3 {scripts_path}/xhs_extract.py --url "$YTDLP_URL" --action extract`
    - Path B：读取 `references/extract-js.md`，在已通过账号安全门禁的页面提取数据
+   - 如果 `yt-dlp` 报 `No video formats found`，不要直接判定失败；这常见于图文笔记，继续走 Path A / Path B。
 
 笔记里的链接字段始终使用用户发送的 `ORIGINAL_LINK`。
 
@@ -67,7 +65,7 @@ yt-dlp --dump-single-json --skip-download "$YTDLP_URL" 2>/dev/null
 
 ### Step 3：评论
 
-小红书：账号安全门禁通过后，滚动到评论区，使用 `references/comments-js.md` 提取可见的热门评论。评论不可见时说明限制并继续。Twitter/X 跳过评论提取。
+账号安全门禁通过后，滚动到评论区，使用 `references/comments-js.md` 提取可见的热门评论。评论不可见时说明限制并继续。
 
 ### Step 4：选择模板
 
@@ -88,7 +86,7 @@ Frontmatter 规则：
 
 - 使用 YAML 语法，字段冒号用英文冒号。
 - `tags` 必须是数组格式：`[tag1, tag2]`。
-- 必须包含 `激活`，且至少一个维度为 true 或非空。
+- 不要写入个人专属字段。
 - 创作素材必须包含 `品牌`、`情绪`、`场景`、`平台`。
 
 区域裁剪：
